@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12152f">
+  <meta name="description" content="Rasyonel sayılarla dört işlem canavarları parkurunda yarış!">
+  <title>Rasyonel Sayılar: İşlem Canavarları</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./"><span class="brand-mark">½</span><span>Math Pop <b>with Ru</b></span></a>
+    <div class="top-actions"><span class="tag">2–4 OYUNCU</span><button id="galleryBtn" class="quiet">Görsel koleksiyonu</button><button id="rulesBtn" class="quiet">Nasıl oynanır?</button></div>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <div><span class="eyebrow">ZAR AT · İŞLEMİ ÇÖZ · PARKURDA İLERLE</span><h1>Rasyonel Sayılar:<br><em>İşlem Canavarları</em></h1><p>Canavarını seç, dört işlem parkurunda yarış ve bitişe ulaş!</p></div>
+      <div class="hero-art" aria-hidden="true"><img src="assets/monster-blue.webp" alt=""><img src="assets/monster-red.webp" alt=""><img src="assets/monster-green.webp" alt=""><img src="assets/monster-purple.webp" alt=""></div>
+      <div class="hero-die" aria-hidden="true">⚄</div>
+    </section>
+    <section id="playerBar" class="player-bar" aria-label="Oyuncular"></section>
+    <section class="game-layout">
+      <section class="board-card">
+        <div class="board-heading"><div><span class="eyebrow">49 KARELİ OYUN PARKURU</span><h2>Canavarlar yarışı</h2></div><span id="turnLabel" class="turn-label">Oyuncuları ayarla</span></div>
+        <div id="board" class="board" aria-label="49 kareli oyun parkuru"></div>
+        <div class="board-legend"><span><i class="dot blue"></i>Toplama</span><span><i class="dot red"></i>Çıkarma</span><span><i class="dot green"></i>Çarpma</span><span><i class="dot purple"></i>Bölme</span><span><i class="dot gold"></i>Özel kart</span></div>
+      </section>
+      <aside id="panel" class="panel"></aside>
+    </section>
+    <section class="art-strip"><span>OYUN MATERYALLERİ</span><button id="viewArt" class="text-link">Kartları ve kılavuzu görüntüle →</button></section>
+    <footer>Math Pop with Ru <span>Rasyonel Sayılar · İşlem Canavarları</span></footer>
+  </main>
+  <dialog id="rulesDialog" class="modal rules-modal"><button class="xclose" data-close="rulesDialog" aria-label="Kapat">×</button><div class="modal-head"><span class="eyebrow">KULLANIM KILAVUZU</span><h2>Nasıl oynanır?</h2></div><div class="rules-body"><img src="assets/guide.webp" alt="Rasyonel sayılar işlem canavarları oyun kılavuzu"><div><ol><li><b>Oyuncu sayısını seçin.</b> 2–4 kişi kendi canavar piyonunu belirlesin.</li><li><b>Sırayla zar atın.</b> Piyonunuzu gelen sayı kadar ilerletin.</li><li><b>Kareye göre kart çekin.</b> Dört işlem veya özel kartın yönergesini uygulayın.</li><li><b>İşlemi çözün.</b> Cevabı sadeleştirilmiş kesir olarak girin. Denk kesirler kabul edilir.</li><li><b>Doğru cevap:</b> 1 puan kazandırır. Meydan okumada doğru cevap 2 kare ilerletir.</li><li><b>Yanlış cevap:</b> 1 kare geri gidin. Özel kartların etkileri kartta gösterilir.</li><li><b>İlk bitişe ulaşan kazanır.</b> Bir zar atışı 49. kareyi geçerse bitiş karesinde durun.</li></ol><p class="rule-note">Bu dijital sürümde bonus, tuzak ve meydan okuma etkileri otomatik uygulanır. “Karma” karesi dört işlem türünden rastgele bir soru getirir.</p></div></div></dialog>
+  <dialog id="galleryDialog" class="modal gallery-modal"><button class="xclose" data-close="galleryDialog" aria-label="Kapat">×</button><div class="modal-head"><span class="eyebrow">PARKURUN TÜM GÖRSELLERİ</span><h2>Canavar koleksiyonu</h2><p>Hazırladığımız parkur, piyonlar, kartlar ve arka yüzler.</p></div><div id="gallery" class="gallery"></div></dialog>
+  <dialog id="imageDialog" class="modal image-modal"><button class="xclose" data-close="imageDialog" aria-label="Kapat">×</button><img id="largeImage" alt=""></dialog>
+  <dialog id="finishDialog" class="modal finish-modal"><button class="xclose" data-close="finishDialog" aria-label="Kapat">×</button><div id="finishContent"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
